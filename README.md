@@ -42,3 +42,10 @@ config('app.missing-key', 'default-value'); // it returns 'default-value'
 > If you try to get a value that doesn't exist it will return null or the default value
 
 ## Set value
+
+You just simple pass the key and the value to set a configuration value
+
+```
+config().set('app.key', 'new-value');
+config('app.key'); // it returns 'new-value'
+```
