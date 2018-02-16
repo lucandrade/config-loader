@@ -1,0 +1,26 @@
+{
+  "name": "config-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "export NODE_ENV=test || SET NODE_ENV=test && mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucandrade/config-loader.git"
+  },
+  "author": "Lucas Andrade <lucas.me@yahoo.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucandrade/config-loader/issues"
+  },
+  "homepage": "https://github.com/lucandrade/config-loader#readme",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "expect": "^22.3.0",
+    "mocha": "^5.0.1"
+  }
+}
