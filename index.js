@@ -1,5 +1,6 @@
 const fs = require('fs');
 const _ = require('lodash');
+
 let cache = {};
 let configPath = './config';
 
@@ -8,8 +9,10 @@ const vars = {
 };
 
 function loadFile(filename) {
-    if (fs.existsSync(`${configPath}/${filename}.js`) || fs.existsSync(`${configPath}/${filename}.json`)) {
-        return require(`${configPath}/${filename}`);
+    const fullConfigPath = `${process.cwd()}/${configPath}`;
+
+    if (fs.existsSync(`${fullConfigPath}/${filename}.js`) || fs.existsSync(`${fullConfigPath}/${filename}.json`)) {
+        return require(`${fullConfigPath}/${filename}`);
     }
 
     return null;

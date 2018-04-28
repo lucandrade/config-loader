@@ -1,5 +1,5 @@
 const expect = require('expect');
-const config = require(`../index`)().path(`${process.cwd()}/config`);
+const config = require(`../index`);
 
 describe('Helper: Config', () => {
     afterEach(() => {
