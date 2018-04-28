@@ -1,7 +1,7 @@
 const fs = require('fs');
 const _ = require('lodash');
 let cache = {};
-let configPath;
+let configPath = './config';
 
 const vars = {
     env: process.env.NODE_ENV || 'development'
