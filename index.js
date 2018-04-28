@@ -39,7 +39,7 @@ function get(path, defaultValue) {
 
     if (data) {
         if (parts.length === 0) {
-            return _.get(data, path, defaultValue);
+            return _.get(data, path, defaultValue || data);
         }
         
         return _.get(data, parts.join('.'), defaultValue);
