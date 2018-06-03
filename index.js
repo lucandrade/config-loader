@@ -12,6 +12,7 @@ function loadFile(filename) {
     const fullConfigPath = `${process.cwd()}/${configPath}`;
 
     if (fs.existsSync(`${fullConfigPath}/${filename}.js`) || fs.existsSync(`${fullConfigPath}/${filename}.json`)) {
+        delete require.cache[require.resolve(`${fullConfigPath}/${filename}`)];
         return require(`${fullConfigPath}/${filename}`);
     }
 
@@ -41,7 +42,7 @@ function get(path, defaultValue) {
         if (parts.length === 0) {
             return _.get(data, path, defaultValue || data);
         }
-        
+
         return _.get(data, parts.join('.'), defaultValue);
     }
 
